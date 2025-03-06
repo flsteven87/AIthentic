@@ -1,43 +1,40 @@
 [build-system]
-requires = ["setuptools>=42", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
 
-[project]
+[tool.poetry]
 name = "aithentic"
 version = "0.1.0"
 description = "AI功能探索和應用開發平台"
 readme = "README.md"
-authors = [
-    {name = "AIthentic Team", email = "example@example.com"}
-]
-license = {text = "MIT"}
+authors = ["AIthentic Team <example@example.com>"]
+license = "MIT"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
-requires-python = ">=3.8"
-dependencies = [
-    "langchain>=0.1.0",
-    "langchain-openai>=0.0.2",
-    "langchain-ollama>=0.0.2",
-    "openai>=1.0.0",
-    "python-dotenv>=1.0.0",
-    "playwright>=1.40.0",
-    "beautifulsoup4>=4.12.0",
-    "requests>=2.28.0",
-    "yt-dlp>=2023.11.14",
-    "faster-whisper>=0.9.0",
-    "ffmpeg-python>=0.2.0",
-    "streamlit>=1.28.0",
-]
+packages = [{include = "aithentic"}]
 
-[project.optional-dependencies]
-dev = [
-    "pytest>=7.0.0",
-    "black>=23.0.0",
-    "isort>=5.0.0",
-]
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+langchain = "*"
+langchain-openai = "*"
+langchain-ollama = "*"
+openai = "*"
+python-dotenv = "*"
+playwright = "*"
+beautifulsoup4 = "*"
+requests = "*"
+yt-dlp = "*"
+faster-whisper = "*"
+ffmpeg-python = "*"
+streamlit = "*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+black = "*"
+isort = "*"
 
 [tool.black]
 line-length = 100

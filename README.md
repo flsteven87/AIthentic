@@ -1,78 +1,101 @@
 # AIthentic
 
-AIthentic是一個AI功能探索和應用開發平台，集成了多種AI模型和工具，用於構建各種實用的AI應用程式。
+AIthentic is an AI exploration and application development platform that integrates various AI models and tools for building practical AI applications.
 
-## 專案概述
+## Project Overview
 
-本專案旨在探索和實現各種AI功能，包括但不限於：
+This project aims to explore and implement various AI capabilities, including but not limited to:
 
-- 自然語言處理與對話系統
-- 瀏覽器自動化與網頁內容分析
-- 文本摘要與內容生成
-- 影片內容轉錄與摘要
-- 多模態內容處理
-- AI代理與工具集成
+- Natural Language Processing and Conversational Systems
+- Browser Automation and Web Content Analysis
+- Text Summarization and Content Generation
+- Video Transcription and Summarization
+- Multimodal Content Processing
+- AI Agents and Tool Integration
 
-## 專案結構
+## Project Structure
 
 ```
 AIthentic/
-├── aithentic/             # 核心功能模組
-│   ├── agents/            # AI代理實現
-│   ├── llm/               # 語言模型封裝
-│   ├── tools/             # AI工具集合
-│   └── utils/             # 通用工具函數
+├── aithentic/             # Core functionality modules
+│   ├── agents/            # AI agent implementations
+│   ├── llm/               # Language model wrappers
+│   ├── tools/             # AI tools collection
+│   └── utils/             # Utility functions
 │
-├── apps/                  # 應用程式目錄
-│   ├── youtube_summary/   # YouTube影片摘要應用
-│   └── web_explorer/      # 網頁瀏覽和摘要應用
+├── apps/                  # Applications directory
+│   ├── youtube_summary/   # YouTube video summarization app
+│   └── web_explorer/      # Web browsing and summarization app
 │
-├── data/                  # 資料目錄
-├── docs/                  # 文檔
-├── scripts/               # 實用腳本
-└── tests/                 # 測試目錄
+├── data/                  # Data directory
+├── docs/                  # Documentation
+├── scripts/               # Utility scripts
+└── tests/                 # Test directory
 ```
 
-## 快速開始
+## Getting Started
 
-### 環境設置
+### Environment Setup
 
-1. 克隆存儲庫:
+1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/AIthentic.git
    cd AIthentic
    ```
 
-2. 安裝依賴:
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-
-3. 配置環境變數:
+   
+   Alternatively, if you use Poetry:
    ```bash
-   cp .env.example .env
-   # 編輯 .env 文件，設置必要的API密鑰
+   poetry install
    ```
 
-### 運行應用
+3. Configure environment variables:
+   ```bash
+   cp .env.example .env
+   # Edit the .env file to set necessary API keys
+   ```
 
-- 運行YouTube影片摘要應用:
+### Running Applications
+
+- Run the YouTube video summarization app:
   ```bash
   streamlit run apps/youtube_summary/app.py
   ```
 
-- 運行網頁瀏覽器應用:
+- Run the web browser application:
   ```bash
   python apps/web_explorer/app.py
   ```
 
-## 功能模組
+## Core Modules
 
-- **Agents**: 智能代理用於執行複雜任務，如瀏覽網頁、分析內容等
-- **LLM**: 語言模型包裝器，支持OpenAI、Ollama等模型
-- **Tools**: 各種AI工具，如摘要生成器、語音轉文字等
-- **Utils**: 通用工具函數，包括文件處理、日誌記錄等
+### Agents
+Intelligent agents designed to perform complex tasks such as web browsing, content analysis, and task automation.
 
-## 貢獻
+### LLM
+Language model wrappers supporting various models including OpenAI and Ollama models.
 
-歡迎提交問題和建議，或直接提交Pull Request。
+### Tools
+Various AI tools including summarization generators, speech-to-text converters, and content analyzers.
+
+### Utils
+General utility functions for file handling, logging, and other common operations.
+
+## Applications
+
+### YouTube Summary
+An application that downloads YouTube videos, transcribes their content, and generates concise summaries.
+
+### Web Explorer
+A browser-based application for navigating websites, extracting content, and generating insights from web pages.
+
+## Technical Requirements
+
+- Python 3.9 or higher
+- Dependencies listed in requirements.txt or pyproject.toml
+- API keys for various services (OpenAI, etc.)
+- FFmpeg for media processing

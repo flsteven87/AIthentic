@@ -12,6 +12,7 @@ This project aims to explore and implement various AI capabilities, including bu
 - Video Transcription and Summarization
 - Multimodal Content Processing
 - AI Agents and Tool Integration
+- Retrieval-Augmented Generation (RAG) Systems
 
 ## Project Structure
 
@@ -20,12 +21,20 @@ AIthentic/
 ├── aithentic/             # Core functionality modules
 │   ├── agents/            # AI agent implementations
 │   ├── llm/               # Language model wrappers
+│   ├── rag/               # Retrieval-Augmented Generation components
+│   │   ├── document_loaders/  # Document loading utilities
+│   │   ├── text_splitters/    # Text chunking strategies
+│   │   ├── embeddings/        # Embedding models
+│   │   ├── vector_stores/     # Vector storage implementations
+│   │   ├── retrievers/        # Document retrieval components
+│   │   └── generators/        # Answer generation components
 │   ├── tools/             # AI tools collection
 │   └── utils/             # Utility functions
 │
 ├── apps/                  # Applications directory
 │   ├── youtube_summary/   # YouTube video summarization app
-│   └── web_explorer/      # Web browsing and summarization app
+│   ├── web_explorer/      # Web browsing and summarization app
+│   └── rag_app/           # RAG-based document Q&A application
 │
 ├── data/                  # Data directory
 ├── docs/                  # Documentation
@@ -71,6 +80,11 @@ AIthentic/
   python apps/web_explorer/app.py
   ```
 
+- Run the RAG document Q&A application:
+  ```bash
+  streamlit run apps/rag_app/streamlit_app.py
+  ```
+
 ## Core Modules
 
 ### Agents
@@ -78,6 +92,15 @@ Intelligent agents designed to perform complex tasks such as web browsing, conte
 
 ### LLM
 Language model wrappers supporting various models including OpenAI and Ollama models.
+
+### RAG (Retrieval-Augmented Generation)
+A modular system for building document-based question answering applications:
+- **Document Loaders**: Components for loading documents from various sources
+- **Text Splitters**: Strategies for chunking documents into manageable pieces
+- **Embeddings**: Models for converting text into vector representations
+- **Vector Stores**: Storage solutions for document embeddings
+- **Retrievers**: Components for retrieving relevant documents based on queries
+- **Generators**: Models for generating answers based on retrieved documents
 
 ### Tools
 Various AI tools including summarization generators, speech-to-text converters, and content analyzers.
@@ -92,6 +115,9 @@ An application that downloads YouTube videos, transcribes their content, and gen
 
 ### Web Explorer
 A browser-based application for navigating websites, extracting content, and generating insights from web pages.
+
+### RAG Document Q&A
+An interactive application that allows users to upload documents, process them using RAG techniques, and ask questions about their content. The application retrieves relevant information from the documents and generates accurate answers.
 
 ## Technical Requirements
 

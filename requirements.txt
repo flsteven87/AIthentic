@@ -4,6 +4,8 @@ langchain-openai
 langchain-ollama
 openai
 python-dotenv
+numpy
+scikit-learn
 
 # Browser tools
 playwright

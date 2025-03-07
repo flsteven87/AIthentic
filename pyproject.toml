@@ -17,7 +17,7 @@ classifiers = [
 packages = [{include = "aithentic"}]
 
 [tool.poetry.dependencies]
-python = ">=3.9,<3.13"
+python = ">=3.10,<3.13"
 langchain = "*"
 langchain-openai = "*"
 langchain-ollama = "*"
@@ -30,6 +30,8 @@ yt-dlp = "*"
 faster-whisper = "*"
 ffmpeg-python = "*"
 streamlit = "*"
+numpy = "^2.2.3"
+scikit-learn = "^1.6.1"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "*"

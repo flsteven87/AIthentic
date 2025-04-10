@@ -7,19 +7,44 @@ AIthentic is a proof-of-concept system that leverages LLM agents for authenticat
 ## Environment Setup
 
 ### Prerequisites
-- Python 3.10+
-- Conda package manager
+- Python 3.12
 
 ### Setup Instructions
 
+Choose one of the following methods to set up your virtual environment:
+
+#### Option 1: Using venv (Recommended)
+```bash
+# Create and activate a virtual environment
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Install dependencies
+cd backend
+pip install -r requirements.txt
+```
+
+#### Option 2: Using Conda
 ```bash
 # Create and activate a conda environment
-conda create -n AIthentic python=3.10
+conda create -n AIthentic python=3.12
 conda activate AIthentic
 
 # Install dependencies
 cd backend
 pip install -r requirements.txt
+```
+
+#### Option 3: Using Pipenv
+```bash
+# Install pipenv if not already installed
+pip install pipenv
+
+# Create environment and install dependencies
+cd backend
+pipenv --python 3.12
+pipenv install -r requirements.txt
+pipenv shell
 ```
 
 ### Environment Configuration
@@ -47,6 +72,7 @@ Required variables in the `.env` file:
 The project uses pre-commit hooks to ensure code quality. To set them up:
 
 ```bash
+# Make sure you're in your virtual environment
 # Install pre-commit
 pip install pre-commit
 
@@ -62,8 +88,7 @@ This will automatically run code formatting and linting checks before each commi
 ## Running the Application
 
 ```bash
-# Activate the environment
-conda activate AIthentic
+# Make sure your virtual environment is activated
 
 # Start the API server
 cd backend
